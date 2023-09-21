@@ -25,11 +25,16 @@ const Container = () => {
   const handleOnSubmitMessage = async (mensajeEnviadoPorUser) => {
     let fecha = new Date()
     let data = await fetchData( mensajeEnviadoPorUser )
-
+    let hora= fecha.getHours();
+    let minutos = fecha.getMinutes()
+    if(minutos <10 ){
+      //Si los minutos son entre 0 y 9, le agrego un 0 adelante (Sino muestra la hora tipo 9:4 cuando son 9:04)
+      minutos = '0'+minutos;
+    }
     setHistoricMessages(prevMessages => [
       ...prevMessages,
-      { user: 'usuario', message: mensajeEnviadoPorUser, hora: fecha.getHours() , minutos: fecha.getMinutes() },
-      { user: 'bot', message: data.title, hora: fecha.getHours() , minutos: fecha.getMinutes() }
+      { user: 'usuario', message: mensajeEnviadoPorUser, hora: hora , minutos: minutos },
+      { user: 'bot', message: data.title, hora: hora , minutos: minutos }
     ])
   }
 
