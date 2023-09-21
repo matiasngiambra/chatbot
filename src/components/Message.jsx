@@ -36,7 +36,7 @@ const Message = ({ enviadoPor, minutos, hora, children }) => {
     return (
         <div className={classEnviado(enviadoPor)} >
             <div className='message-text'>
-                <span className='span-from'> {enviadoSpan(enviadoPor)} </span>
+                <span className='span-from' role="img" aria-label="Icono de mensaje"> {enviadoSpan(enviadoPor)} </span>
                 <p> {children} </p>
             </div>
             <div className='message-icon'>

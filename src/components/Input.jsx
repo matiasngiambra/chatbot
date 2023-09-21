@@ -23,7 +23,7 @@ const Input = ({ onEnviarInformacion }) => {
             <div className="input-box">
                 <input id='input' className="input" type="text" placeholder='¡Pregúntame algo!' />
             </div>
-            <button type="submit" className="button-box"> 📤  </button>
+            <button type="submit" className="button-box" role="button" aria-label="Enviar"> 📤  </button>
         </form>
     )
 }
