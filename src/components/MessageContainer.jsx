@@ -17,7 +17,7 @@ const MessageContainer = ({ mensajes }) => {
     <>
       <div className='messageContainer'>
         {mensajes.map((message, index) => (
-          <Message key={index} enviadoPor={message.user}  > {message.message} </Message>
+          <Message key={index} enviadoPor={message.user} hora={message.hora}  minutos={message.minutos}> {message.message} </Message>
         ))}
 
         <div ref={scrollRef}></div>

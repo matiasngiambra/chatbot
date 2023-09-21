@@ -23,13 +23,13 @@ const Container = () => {
   }
 
   const handleOnSubmitMessage = async (mensajeEnviadoPorUser) => {
-    
+    let fecha = new Date()
     let data = await fetchData( mensajeEnviadoPorUser )
 
     setHistoricMessages(prevMessages => [
       ...prevMessages,
-      { user: 'usuario', message: mensajeEnviadoPorUser },
-      { user: 'bot', message: data.title }
+      { user: 'usuario', message: mensajeEnviadoPorUser, hora: fecha.getHours() , minutos: fecha.getMinutes() },
+      { user: 'bot', message: data.title, hora: fecha.getHours() , minutos: fecha.getMinutes() }
     ])
   }
 

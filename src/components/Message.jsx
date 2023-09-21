@@ -1,7 +1,7 @@
 import React, { Children } from 'react'
 import '../styles/message.css'
 
-const Message = ({ enviadoPor, children }) => {
+const Message = ({ enviadoPor, minutos, hora, children }) => {
 
     const classEnviado = (enviadoPor) => {
         if (enviadoPor == 'bot') {
@@ -25,9 +25,9 @@ const Message = ({ enviadoPor, children }) => {
 
     const enviadoSpan = (enviadoPor) => {
         if (enviadoPor == 'bot') {
-            return 'El bot respondió'
+            return `El bot respondió a las ${hora}:${minutos}`
         } else if (enviadoPor == 'usuario') {
-            return 'Escribiste'
+            return `Escribiste a las ${hora}:${minutos}`
         } else {
             return 'error'
         }
