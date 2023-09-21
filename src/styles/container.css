@@ -1,0 +1,30 @@
+.container-chatbot{
+    display: flex;
+    background-color: white;
+    width: 70%;
+    height: 90%;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+    background-image: url(/src/images/whatsapp-fondo.jpg);
+    flex-direction: column;
+    align-content: space-around;
+    justify-content: space-evenly;
+    border: 2px solid #08342f;
+
+}
+
+.div-chatbot{
+    width: 90%;
+    border: 1px solid #224f5d;
+    border-radius: 7px;
+    font-family: sans-serif;
+    background-color: #1b7591;
+    text-align: center;
+    align-self: center;
+    color: white
+
+}
+h2{
+    margin:5px;
+}
