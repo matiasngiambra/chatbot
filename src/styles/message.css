@@ -8,7 +8,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    
+    overflow-wrap: break-word;
 }
 
 .message-robot {
